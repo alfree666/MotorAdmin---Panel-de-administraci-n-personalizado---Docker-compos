@@ -1,5 +1,5 @@
 # motoradmin
-MotorAdmin - Plataforma de base de datos - Docker compose
+MotorAdmin - Panel de administración personalizado - Docker compose
 
 Ver en "localhost:8200"
 
