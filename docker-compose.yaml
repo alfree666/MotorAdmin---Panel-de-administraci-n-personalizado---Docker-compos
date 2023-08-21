@@ -7,6 +7,7 @@ services:
     container_name: motoradmin    
     depends_on:
       - postgres
+    restart: unless-stopped   
     ports:
       - '8200:3000'
     volumes:
@@ -16,8 +17,11 @@ services:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/motoradmin
 
   postgres:
-    image: postgres:13.4
+    image: postgres:15.4
     container_name: motoradmin-db
+    restart: unless-stopped
+    ports:
+      - 5432:5432    
     volumes:
       - ./postgres:/var/lib/postgresql/data
     environment:
